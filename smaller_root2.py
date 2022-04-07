@@ -8,7 +8,7 @@ Template - Compute the smaller root of a quadratic equation.
 def smaller_root(a,b,c):
     discriminat=b**2-4*a*c
     if discriminat<0 or a ==0:
-        print("Error: No real solutions")
+        return "Error: No real solutions"
     else:
         one_solution=(-b+discriminat**0.5)/(2*a)
         another_solution=(-b-discriminat**0.5)/(2*a)
