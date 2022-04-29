@@ -28,7 +28,6 @@ s      Returns IDENTICAL if the two lines are the same.
         for index in range(short_len):
             if line1[index]!=line2[index]:
                 return index
-       
         return short_len
     
 # line1='AAX'
@@ -78,8 +77,8 @@ def multiline_diff(lines1, lines2):
 
       Returns (IDENTICAL, IDENTICAL) if the two lists are the same.
     """
-    total_short_line = min(len(lines1),len(lines2))
-    for line in range(total_short_line):
+    total_short_lines = min(len(lines1),len(lines2))
+    for line in range(total_short_lines):
         index = singleline_diff(lines1[line],lines2[line])
         if index != IDENTICAL:
             return (line,index)
@@ -132,7 +131,7 @@ def file_diff_format(filename1, filename2):
     
     else:
         if lines1 == []:
-            return "Line1:\n\n^\n" + lines2[diff[0]] + "\n"
+            return "Line 1:\n\n^\n" + lines2[diff[0]] + "\n"
         elif lines2 == []:
             return "Line 0:\n" + lines1[diff[0]] + "\n^\n\n"
                                             
