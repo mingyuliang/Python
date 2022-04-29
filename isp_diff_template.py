@@ -85,7 +85,7 @@ def multiline_diff(lines1, lines2):
     if len(lines1) == len(lines2):
         return (IDENTICAL, IDENTICAL)
     else:
-        return(total_short_line,0)
+        return(total_short_lines,0)
 
 
 def get_file_lines(filename):
